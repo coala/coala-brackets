@@ -1,0 +1,124 @@
+.CodeMirror *[class*="coala-brackets"] {
+    z-index: 5;
+}
+
+.CodeMirror *[class*="coala-brackets-w"] {
+    border-bottom: 2px dotted #f89406;
+    z-index: 6;
+}
+
+.CodeMirror *[class*="coala-brackets-e"] {
+    border-bottom: 2px dotted #bd362f;
+    z-index: 7;
+}
+
+.CodeMirror *[class*="coala-brackets-i"] {
+    border-bottom: 2px dotted #4286f4;
+    z-index: 7;
+}
+
+.CodeMirror .coala-brackets-gutter {
+    width: 1.5em;
+}
+
+
+/*icon image from http://findicons.com/icon/184668/light_bulb*/
+.CodeMirror .coala-brackets-gutter-messages {
+    background-image: url(img/light_bulb.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+    margin-top: 0.15em;
+    cursor: pointer;
+}
+
+.CodeMirror .coala-brackets-gutter-errors {
+    background-color: red;
+    border-color: #f2dede;
+    border-radius: 1em;
+}
+
+.CodeMirror .coala-brackets-line-widget {
+    margin-top: 10px;
+    margin-left: 50px;
+
+    cursor: auto; // Allow cursor to display area as text
+
+    // Enable text selection
+    -webkit-user-select: text;
+    user-select: text;
+
+    .coala-brackets-line-error, .coala-brackets-line-warning, .coala-brackets-line-info {
+        background-position: left;
+        background-size: 1em;
+        background-repeat: no-repeat;
+        padding: 0 1.5em;
+    }
+
+    .coala-brackets-line-error {
+        background-image: url(img/topcoat-error-15.svg);
+    }
+
+    .coala-brackets-line-warning {
+        background-image: url(img/topcoat-warning-15.svg);
+    }
+    
+    .coala-brackets-line-info {
+    }
+}
+
+@-webkit-keyframes coala-brackets-pulse {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #ffb0cd;
+    }
+}
+
+#coala-brackets-lint-indicator {
+    display: none; /* Hide lint indicator by default, so as not to show before show/hide code is run */
+    width: 13px; /* Same width as default indicator */
+    background-position: center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    &[status="error"] {
+        -webkit-animation: coala-brackets-pulse 2s linear;
+        -webkit-animation-iteration-count: 3;
+        background-image: url(img/topcoat-error-15.svg);
+    }
+
+    &[status="warning"] {
+        background-image: url(img/topcoat-warning-15.svg);
+    }
+
+    &[status="okay"] {
+        background-image: url(img/topcoat-okay-15.svg);
+    }
+
+    &[status=inactive] {
+        background-image: url(img/topcoat-inactive-15.svg);
+    }
+}
+
+#coala-brackets-problems-panel {
+    -webkit-user-select: text;  /* allow selecting error messages for easy web searching */
+
+    .line {
+        text-align: right;  /* make line number line up with editor line numbers */
+    }
+
+    .line-text {
+        white-space: nowrap;
+        width: auto;
+    }
+
+    .line-snippet {
+        white-space: nowrap;
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+

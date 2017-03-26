@@ -1,0 +1,14 @@
+{
+    "name": "coala.brackets-node",
+    "title": "Coala",
+    "description": "Server part for Coala Brackets Extension",
+    "homepage": "https://github.com/coala/coala-brackets",
+    "version": "0.0.1",
+    "author": "Oleg Safonov <by.xsofa@gmail.com> (http://github.com/binore)",
+    "license": "AGPL-3.0",
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "path": "^0.12.7",
+        "child_process": "^1.0.2",
+    }
+}

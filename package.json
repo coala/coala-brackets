@@ -1,0 +1,12 @@
+{
+    "name": "coala",
+    "title": "Coala",
+    "description": "Coala extension for Brackets.",
+    "homepage": "https://github.com/coala/coala-brackets",
+    "version": "0.0.1",
+    "author": "Oleg Safonov <by.xsofa@gmail.com> (http://github.com/binore)",
+    "license": "AGPL-3.0",
+    "engines": {
+        "brackets": ">=0.38.0"
+    }
+}
